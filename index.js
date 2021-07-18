@@ -4,9 +4,7 @@ const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config();
 
 const provider = new ethers.providers.JsonRpcProvider(data.url);
-console.log(process.env.TELEGRAM_TOKEN)
 const token = process.env.TELEGRAM_TOKEN;
-// const token = '1904603403:AAEcBwan-sEuSekEU3ffuDwYep7kPgnRpUQ';
 
 const bot = new TelegramBot(token, {polling: true});
 let alertChatId;
